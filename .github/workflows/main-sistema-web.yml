@@ -7,15 +7,14 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-    
+  build-and-publish:
     runs-on: ubuntu-latest
-
-    dir:
-      work-directory: Codigo/ModuloDeSoftware/WebAPI/SalasUfsWeb
-
+    
     environment:
       name: PROD
+    
+    env:
+      work-directory: Codigo/ModuloDeSoftware/WebAPI/SalasUfsWeb
 
     steps:
     - name: Execute checkout in repository
