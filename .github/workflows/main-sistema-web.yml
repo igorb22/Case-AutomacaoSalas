@@ -11,7 +11,7 @@ jobs:
     
     runs-on: ubuntu-latest
 
-    env:
+    dir:
       work-directory: Codigo/ModuloDeSoftware/WebAPI/SalasUfsWeb
 
     environment:
