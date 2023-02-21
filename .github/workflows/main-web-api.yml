@@ -45,7 +45,7 @@ jobs:
     - name: Publish Application
       run: |
         cd ${{env.work-directory}}
-        dotnet publish -c --configuration Release --no-restore --output ./publish 
+        dotnet publish -c --configuration Release --no-restore --output ./publishAPI 
       
 #    - name: Upload via FTP
 #      uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -53,7 +53,7 @@ jobs:
 #        server: ${{ secrets.FTP_SERVER }}
 #        username: ${{ secrets.FTP_USER }}
 #        password: ${{ secrets.FTP_PASS }}
-#        local-dir: '${{env.work-directory}}/publish/'
+#        local-dir: '${{env.work-directory}}/publishAPI/'
 #        remote-dir: ./
 #        exclude: |
 #          **/.git*
