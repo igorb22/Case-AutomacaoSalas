@@ -17,7 +17,7 @@ namespace SalasUfsWeb.Controllers
 {
     public class UsuarioController : Controller
     {
-        //private readonly IUsuarioService _usuarioService;
+        private readonly IUsuarioService _usuarioService;
         private readonly ITipoUsuarioService _tipoUsuarioService;
         private readonly IOrganizacaoService _organizacaoService;
         private readonly IUsuarioOrganizacaoService _usuarioOrganizacaoService;
