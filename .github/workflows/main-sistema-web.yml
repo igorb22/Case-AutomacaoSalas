@@ -29,7 +29,7 @@ jobs:
     - name: Replace variables
       uses: microsoft/variable-substitution@v1
       with:
-        files: 'appsettings.json'
+        files: '${{env.work-directory}}/appsettings.json'
       env:
         AppSettings.ConnectionStrings.MySqlConnection: "${{secrets.CONNECTION_STRING}}"
 
