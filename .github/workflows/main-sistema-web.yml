@@ -8,9 +8,14 @@ on:
 
 jobs:
   build:
+    
     runs-on: ubuntu-latest
+
     env:
       work-directory: Codigo/ModuloDeSoftware/WebAPI/SalasUfsWeb
+
+    environment:
+      name: PROD
 
     steps:
     - name: Execute checkout in repository
