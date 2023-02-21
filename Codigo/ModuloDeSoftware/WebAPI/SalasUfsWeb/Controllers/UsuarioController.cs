@@ -33,7 +33,7 @@ namespace SalasUfsWeb.Controllers
                                     IHorarioSalaService horarioSalaService
                                 )
         {
-            _usuarioService = usuarioService;
+            //_usuarioService = usuarioService;
             _tipoUsuarioService = tipoUsuarioService;
             _organizacaoService = organizacaoService;
             _usuarioOrganizacaoService = usuarioOrganizacaoService;
