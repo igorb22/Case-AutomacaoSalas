@@ -28,7 +28,7 @@ jobs:
       with:
         files: '${{env.work-directory}}/appsettings.json'
       env:
-        AppSettings.ConnectionStrings.MySqlConnection: "${{secrets.DATABASE_CONNECTION}}"
+        AppSettings.ConnectionStrings.MySqlConnection: "${{secrets.CONNECTION_STRING}}"
 
     - name: Restore dependencies
       run: |
