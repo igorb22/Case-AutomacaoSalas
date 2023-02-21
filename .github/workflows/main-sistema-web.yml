@@ -53,7 +53,7 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USER_WEB }}
         password: ${{ secrets.FTP_PASS_WEB }}
-        local-dir: publish/
+        local-dir: '${{env.work-directory}}/publish/'
         remote-dir: ./
         exclude: |
           **/.git*
