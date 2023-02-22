@@ -48,7 +48,7 @@ jobs:
         dotnet publish -c --configuration Release --no-restore --output ./publishWEB
       
     - name: Upload via FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USER_WEB }}
