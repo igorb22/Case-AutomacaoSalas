@@ -48,28 +48,14 @@ jobs:
         dotnet publish -c --configuration Release --no-restore --output ./publishWEB
     
     - name: Upload via FTP
-      uses: sebastianpopp/ftp-action@releases/v2
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USER_WEB }}
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USER_WEB }}
         password: ${{ secrets.FTP_PASS_WEB }}
-        localDir: '${{env.work-directory}}/publishWEB/'
-        remoteDir: './'
-        forceSsl: true
+        local-dir: '${{env.work-directory}}/publishWEB/'
+        remote-dir: ./
         exclude: |
           **/.git*
           **/.git*/**
           **/AnaliseProjeto
-
-#    - name: Upload via FTP
-#      uses: SamKirkland/FTP-Deploy-Action@4.3.3
-#      with:
-#        server: ${{ secrets.FTP_SERVER }}
-#        username: ${{ secrets.FTP_USER_WEB }}
-#        password: ${{ secrets.FTP_PASS_WEB }}
-#        local-dir: '${{env.work-directory}}/publishWEB/'
-#        remote-dir: ./
-#        exclude: |
-#          **/.git*
-#          **/.git*/**
-#          **/AnaliseProjeto
