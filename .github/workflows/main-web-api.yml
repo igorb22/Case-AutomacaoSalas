@@ -28,8 +28,8 @@ jobs:
             
     steps:
     
-    - run: echo ${{ github.event.inputs.environment }}
-    - run: echo ${{secrets.CONNECTION_STRING}}
+    - name: Echo
+      run: echo '${{ github.event.inputs.environment }} / ${{secrets.CONNECTION_STRING}}'
     
     - name: Execute checkout in repository
       uses: actions/checkout@v2
