@@ -12,10 +12,6 @@ on:
         - info
         - warning
         - debug
-      environment:
-        description: 'Environment to run tests against'
-        type: environment
-        required: true
 
 jobs:
   build:
@@ -24,7 +20,7 @@ jobs:
       work-directory: Codigo/ModuloDeSoftware/WebAPI/WebAPI
     
     environment:
-      name: ${{ github.event.inputs.environment }}
+      name: DEV
             
     steps:
     
