@@ -22,7 +22,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       work-directory: Codigo/ModuloDeSoftware/WebAPI/WebAPI
-
+    
+    environment:
+      name: ${{ github.event.inputs.environment }}
+      
     steps:
     - name: Execute checkout in repository
       uses: actions/checkout@v2
